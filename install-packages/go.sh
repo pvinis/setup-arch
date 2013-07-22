@@ -1,2 +1,3 @@
+pm i go
 mkdir ~/go
-export GOPATH=~/go
+sed -i -e "s/# export GOPATH/export GOPATH/g" ~/.zshrc
