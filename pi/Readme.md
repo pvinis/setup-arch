@@ -1,4 +1,7 @@
-resize root partition
+put SD in ubuntu sudo dd bs=1M if=/home/.../arch.img of=/dev/sdb
+put SD in pi, boot it, and poweroff
+put SD in ubuntu, resize root partition with gparted
+
 pacman -Syu
 mirrorlist.pacnew
 wget make-pi
