@@ -1,0 +1,21 @@
+# make pi installation
+# pvinis
+
+# set root password
+passwd
+
+# set localtime
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Athens /etc/localtime
+
+# set hostname and append it to hosts
+echo archpi > /etc/hostname
+sed -i -e "/^127.*localhost$/ s/$/  archpi/g" /etc/hosts
+
+# set static ip
+###### wget ethernet=sdtatic
+####cp
+###rm erth-static
+netctl disable ethernet-dhcp
+netctl enable ethernet-static
+
